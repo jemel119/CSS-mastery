@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 2: I ♥ NY T-Shirt</title>
+  <style>
+    body {
+      background-color: #d0e8f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Container that holds both the floating text AND the image */
+    .tshirt-wrapper {
+      position: relative;
+      display: inline-block;
+      background-color: #aed6f1;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    img {
+      position: relative;
+      left: 10px;
+      width: 320px;
+      display: block;
+
+      /* Final step: border, padding, margin, shadow */
+      border: 4px solid black;
+      padding: 8px;
+      margin: 15px;
+      box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.5);
+    }
+
+    .words {
+      font-family: Impact, sans-serif;
+      font-size: 60px;
+    }
+
+    .first {
+      position: absolute;
+      top: 115px;
+      left: 95px;
+      z-index: 1;
+    }
+
+    .heart {
+      color: red;
+      font-size: 80px;
+      position: absolute;
+      top: 105px;
+      left: 145px;
+      z-index: 1;
+    }
+
+    .last {
+      position: absolute;
+      top: 115px;
+      left: 225px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tshirt-wrapper">
+    <!-- Text floats OVER the image using absolute positioning -->
+    <span class="first words">I</span>
+    <span class="heart">&hearts;</span>
+    <span class="last words">NY</span>
+
+    <div>
+      <!-- White t-shirt image — swap src for your instructor's image if needed -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Blue_Tshirt.jpg/320px-Blue_Tshirt.jpg"
+           alt="White t-shirt"
+           onerror="this.onerror=null; this.src='https://via.placeholder.com/320x380/ffffff/333333?text=T-Shirt'">
+    </div>
+  </div>
+
+</body>
+</html>
